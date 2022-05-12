@@ -64,3 +64,25 @@ Enfin pour pouvoir agir sur notre base de données (la sélectionner) on utliser
 USE mydatabase;
 ```
 ![img shell](https://github.com/Hakimcdl/mySQL/blob/main/img/usemydatabase.png)  
+```
+## Création des tables  
+Pour créer une table, il nous faudra taper la commande suivante :  
+```SQL
+CREATE TABLE user (
+    id INTEGER NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    nickname VARCHAR(50) NOT NULL,
+    email VARCHAR(100) NOT NULL UNIQUE,
+    adult BOOLEAN DEFAULT false
+);
+```
+![img shell](https://github.com/Hakimcdl/mySQL/blob/main/img/createTableUser.png)
+
+Pour afficher et vérifier que les tables que l'on a créé précédément, on effectue la commande 
+```SQL
+SHOW TABLES;
+```
+Enfin pour afficher et vérifier tout nos champs à l'intérieur de cette table créé précédément, on effectue la commande
+```
+SHOW COLUMNS FROM user;
+```
+![img shell](https://github.com/Hakimcdl/mySQL/blob/main/img/ShowTableColumns.png)
