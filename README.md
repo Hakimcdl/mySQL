@@ -64,7 +64,6 @@ Enfin pour pouvoir agir sur notre base de données (la sélectionner) on utliser
 USE mydatabase;
 ```
 ![img shell](https://github.com/Hakimcdl/mySQL/blob/main/img/usemydatabase.PNG)  
-```
 ## Création des tables  
 Pour créer une table, il nous faudra taper la commande suivante :  
 ```SQL
