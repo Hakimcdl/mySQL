@@ -39,11 +39,10 @@ Une base de donnée contient des objets.
 Dans une base de donnée un objet équivaut à une table, par exemple dans une base de donnée qui rescence des véhicules la table **voiture**  vaut l'objet *voiture*.  
 Pour reprendre notre exemple une **Audi** ou une **BMW** sont chacune une instance de l'objet *voiture*.  
   
->:[warning]:
->Lorsque l'on nomme les bases de données ou les tables on ne doit pas utilisé de caractères spéciaux ou d'espace.  
+>:warning: Lorsque l'on nomme les bases de données ou les tables on ne doit pas utilisé de caractères spéciaux ou d'espace.  
 >Par convention les objets (nom des tables) sont au singulier.  
 
-*Les objets sont catégorisés par leurs noms  
-*Les types représentent les champs  
-*Les caractéristiques des champs sont le typage de chaque champ (exple: integer)  
-*Le shéma d'une table est un tableau récapitulant les caractéristiques des champs des objets
+* Les objets sont catégorisés par leurs noms  
+* Les types représentent les champs  
+* Les caractéristiques des champs sont le typage de chaque champ (exple: integer)  
+* Le shéma d'une table est un tableau récapitulant les caractéristiques des champs des objets  
