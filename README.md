@@ -53,4 +53,4 @@ Pour créer une base de données, il nous faudra taper la commande suivante :
 CREATE DATABASE mydatabase;
 ```
 Un petit message apparait pour nous indiquer que la requête a bien été éxécuter :  
-![img shell](https://github.com/Hakimcdl/mySQL/blob/main/img/createdatabase.PNG)
+![img shell](https://github.com/Hakimcdl/mySQL/blob/main/img/createdatabase.png)
