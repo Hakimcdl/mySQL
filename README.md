@@ -49,7 +49,7 @@ Pour reprendre notre exemple une **Audi** ou une **BMW** sont chacune une instan
 ------
 ## Création de la base de données  
 Pour créer une base de données, il nous faudra taper la commande suivante :  
-````SQL
+```SQL
 CREATE DATABASE mydatabase;
 ```
 Un petit message apparait pour nous indiquer que la requête a bien été éxécuter :  
