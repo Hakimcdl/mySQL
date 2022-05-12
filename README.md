@@ -46,3 +46,11 @@ Pour reprendre notre exemple une **Audi** ou une **BMW** sont chacune une instan
 * Les types représentent les champs  
 * Les caractéristiques des champs sont le typage de chaque champ (exple: integer)  
 * Le shéma d'une table est un tableau récapitulant les caractéristiques des champs des objets  
+------
+## Création de la base de données  
+Pour créer une base de données, il nous faudra taper la commande suivante :  
+````SQL
+CREATE DATABASE mydatabase;
+```
+Un petit message apparait pour nous indiquer que la requête a bien été éxécuter :  
+![img shell](https://github.com/Hakimcdl/mySQL/blob/main/img/createdatabase.PNG)
