@@ -239,9 +239,22 @@ On utilisera la commande **COUNT** qui prends en compte
 
 Voici un exemple pour connaitre le nombre de ligne total dans une table :
 ```SQL
-SELECT COUNT (`price`) FROM car;
-```
-```SQL
 SELECT COUNT(*) FROM car;
 ```
+Par exemple pour connaitre le nomre de libre total sur le la colonne prix, nous effectuons la requête suivante:
+```SQL
+SELECT COUNT (`price`) FROM car;
+```
 ![img shell](https://github.com/Hakimcdl/mySQL/blob/main/img/count.PNG)
+
+### La fonction d'agrégation SQL MAX
+
+Cela permet de retourner la valeur maximum d’une colonne sur un ensemble de ligne à la fois pour des données numériques ou alphanumérique : 
+```SQL
+SELECT MAX(NOM DE LA COLONNE) FROM table;
+```
+Par exemple pour voir la voiture la plus consommatrice sur la route nous effectuons la requête suivante:
+```SQL
+SELECT MAX(`road_oil_consumption`) FROM car;
+```
+![img shell](https://github.com/Hakimcdl/mySQL/blob/main/img/max.PNG)
