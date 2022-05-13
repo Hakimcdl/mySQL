@@ -91,7 +91,7 @@ SHOW COLUMNS FROM user;
 Voici les différents types au sein d'un tableau aissgné à chaque colone et champs: 
 | VARCHAR | INTEGER | BOOLEAN | FLOAT | DATE | TEXT |
 |---------|---------|---------|-------|------|------|
-|une chaine de caractère | max | nombre entier | true or false | nombre décimal | date | chaine de caractère sans limite|
+|une chaine de caractère | nombre entier | true or false | nombre décimal | date | chaine de caractère sans limite|
 ------
 ## Intéragir avec notre base de données
 
@@ -186,3 +186,22 @@ Nous pouvons aussi supprimer tout les utilisateurs d'une table
 ```SQL
 DELETE * FROM `user`
 ```
+----------
+## Les fonctions d'agrégations statiques
+
+Les fonctions d’agrégation sont des fonctions idéales pour effectuer quelques statistiques de bases sur des tables. Les principales fonctions sont les suivantes :
+:::
+AVG() pour calculer la moyenne sur un ensemble d’enregistrement
+:::
+:::
+COUNT() pour compter le nombre d’enregistrement sur une table ou une colonne distincte
+:::
+:::
+MAX() pour récupérer la valeur maximum d’une colonne sur un ensemble de ligne.
+:::
+MIN() pour récupérer la valeur minimum de la même manière que MAX()
+:::
+:::
+SUM() pour calculer la somme sur un ensemble d’enregistrement
+:::
+Cela permet de calculer une valeur moyenne sur un ensemble de données
