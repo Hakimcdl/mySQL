@@ -228,20 +228,20 @@ SELECT AVG(`city_oil_consumption`) FROM car;
 
 Egalement nous pouvons sélectionner les données d'une table par groupe pour spécifier un groupe spécifier (chaque client/utilisateur) :
 ```SQL
-SELECT AVG(`city_oil_consumption`) FROM car GROUP BY nickname;
+SELECT AVG(`city_oil_consumption`) FROM car GROUP BY nickname; /////////////////::A FAIRE POUR VILLE ET ROUTE sur 1 VEHICULE////// 
 ```
 ![img shell](https://github.com/Hakimcdl/mySQL/blob/main/img/consocar.PNG)
 
 ### La fonction d'agrégation SQL COUNT
 
 On utilisera la commande **COUNT** qui prends en compte
-* toutes les données dans une table additionnée 
+* Toutes les données dans une table additionnée 
 
 Voici un exemple pour connaitre le nombre de ligne total dans une table :
 ```SQL
 SELECT COUNT(*) FROM car;
 ```
-Par exemple pour connaitre le nomre de libre total sur le la colonne prix, nous effectuons la requête suivante:
+Par exemple pour connaitre le nombre de ligne total sur le la colonne prix, nous effectuons la requête suivante:
 ```SQL
 SELECT COUNT (`price`) FROM car;
 ```
@@ -256,9 +256,9 @@ Cela permet de retourner la valeur maximum d’une colonne sur un ensemble de li
 ```SQL
 SELECT MAX(NOM DE LA COLONNE) FROM NOM DE LA table;
 ```
-Par exemple pour voir la voiture la plus consommatrice sur la route nous effectuons la requête suivante:
+Par exemple pour voir la voiture la plus consommatrice sur la route nous effectuons la requête suivante: 
 ```SQL
-SELECT MAX(`road_oil_consumption`) FROM car;
+SELECT MAX(`road_oil_consumption`) FROM car; ////AFFICHER QUEL VOITURE CONSOMME LE +
 ```
 ![img shell](https://github.com/Hakimcdl/mySQL/blob/main/img/max.PNG)
 
@@ -269,7 +269,7 @@ On utilisera la commande **MIN** qui prends en compte
 
 Cela permet de retourner la valeur minimale d’une colonne sur un ensemble de ligne à la fois pour des données numériques ou alphanumérique : 
 ```SQL
-SELECT MIN(NOM DE LA COLONNE) FROM NOM DE LA table;
+SELECT MIN(NOM DE LA COLONNE) FROM NOM DE LA table; ////AFFICHER QUEL VOITURE CONSOMME LE -
 ```
 Par exemple pour voir la voiture la plus consommatrice sur la route nous effectuons la requête suivante:
 ```SQL
@@ -286,7 +286,7 @@ Cela permet permet de calculer la somme totale d’une colonne contenant des val
 ```SQL
 SELECT SUM(NOM DE LA COLONNE) FROM NOM DE LA table;
 ```
-Voici un exemple de commande où nous allons calculer la somme totale des prix de tout les voitures :
+Voici un exemple de commande où nous allons calculer la somme totale des prix de toute les voitures :
 ```SQL
 SELECT SUM(`price`) FROM car;
 ```
@@ -294,6 +294,11 @@ SELECT SUM(`price`) FROM car;
 
 On peut également y rajouter une condition en y spécifiant l''id concerné:
 ```SQL
-SELECT SUM(`price`) AS prix_total FROM car WHERE id = 1;
+SELECT SUM(`price`) AS prix_total FROM car WHERE id = 1;   /////lier table pour ajouter une jointure avec USER
 ```
 ![img shell](https://github.com/Hakimcdl/mySQL/blob/main/img/sumid.PNG)
+
+------
+## La fonction SQL INNER JOIN
+
+On utilisera la commande INNER JOIN pour lier plusieurs tables entre-elles
