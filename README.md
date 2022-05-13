@@ -162,6 +162,14 @@ WHERE `email` = 'toto@gmail.com';
 ```
 ![img shell](https://github.com/Hakimcdl/mySQL/blob/main/img/updateuser.PNG)
 
+Egalement nous pouvons metre à jours plusieurs ligne de la table de la base de données :  
+```SQL
+UPDATE `user`
+SET `nickname` = 'riri1', `email` = 'riri1@gmail.com'
+WHERE `id` = 2;
+```
+![img shell](https://github.com/Hakimcdl/mySQL/blob/main/img/updatealldata.PNG)  
+
 Enfin effaçons les objets sélectionnés dans notre base de données : 
 on utilisera la commande **DELETE** qui prends en compte
 * les lignes d'une table
