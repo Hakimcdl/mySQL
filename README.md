@@ -163,4 +163,12 @@ WHERE `email` = 'toto@gmail.com';
 ![img shell](https://github.com/Hakimcdl/mySQL/blob/main/img/updateuser.PNG)
 
 Enfin effaçons les objets sélectionnés dans notre base de données : 
-on utilisera la commande **DELETE**
+on utilisera la commande **DELETE** qui prends en compte
+* les lignes d'une table
+
+Voici un exemple de commande pour supprimer une donnée d'une table en BDD :  
+```SQL
+DELETE FROM `user`
+WHERE `id` = 1;
+```
+![img shell](https://github.com/Hakimcdl/mySQL/blob/main/img/delete.PNG)
