@@ -282,6 +282,11 @@ SELECT MIN(`road_oil_consumption`) FROM car;
 On utilsera la commande **SUM** qui prends en compte
 * toutes les données additionnées d'une table à savoir sur une colonne de données numériques sélectionnée
 
+Cela permet permet de calculer la somme totale d’une colonne contenant des valeurs numériques.
+```SQL
+SELECT SUM(nom_colonne)
+FROM table
+```
 Voici un exemple de commande où nous allons calculer la somme totale des prix de tout les voitures :
 ```SQL
 SELECT SUM(`price`) FROM car;
