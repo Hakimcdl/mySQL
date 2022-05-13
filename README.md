@@ -91,5 +91,27 @@ SHOW COLUMNS FROM user;
 Voici les différents types au sein d'un tableau aissgné à chaque colone et champs: 
 | VARCHAR | INTEGER | BOOLEAN | FLOAT | DATE | TEXT |
 |---------|---------|---------|-------|------|------|
-|une chaine de caractère| max | nombre entier | true or false | nombre décimal | date | chaine de caractère sans limite|
+|une chaine de caractère | max | nombre entier | true or false | nombre décimal | date | chaine de caractère sans limite|
+------
+## Intéragir avec notre base de données
+
+Intéragir avec notre base de données nous permet de réaliser des opérations l'acronyme CRUD qui signifie : 
+**create** **read** **update** **delete**
+Commençons par insérer des objets uniques pour alimenter notre BDD.
+On utilisera la commande **INSERT INTO** qui prends en compte  
+* les paramètres (nom de la table) de la tabe dans laquel on souhaite ajouter l'objet
+* l'odre des colonnes (caractéristique) de l'objet
+* les valeurs correspondants à chaque colonnes  
+
+Voici un exemple de commande pour ajouter un utilisateur dans la BDD : 
+````SQL
+INSERT INTO `user` (`nickname`, `email`, `adult`)
+VALUES ('toto', 'toto@gmail.com', true);
+```
+Voici un exemple où nous allons insérer plusieurs utilisateur à la fois : 
+````SQL
+INSERT INTO `user` (`nickname`, `email`, `adult`)
+VALUES ('riri', 'riri@gmail.com', true), ('fifi', 'fifi@gmail.com', true), ('loulou', 'loulou@gmail.com', true);
+```
+![img shell](https://github.com/Hakimcdl/mySQL/blob/main/img/creationUsers.png)
 
