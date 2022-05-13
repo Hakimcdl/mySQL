@@ -85,3 +85,11 @@ Enfin pour afficher et vérifier tout nos champs à l'intérieur de cette table 
 SHOW COLUMNS FROM user;
 ```
 ![img shell](https://github.com/Hakimcdl/mySQL/blob/main/img/ShowTableColumns.PNG)
+
+### Les différents types au sein d'une table
+
+Voici les différents types au sein d'un tableau aissgné à chaque colone et champs: 
+| VARCHAR | INTEGER | BOOLEAN | FLOAT | DATE | TEXT |
+|---------|---------|---------|-------|------|------|
+|une chaine de caractère| max | nombre entier | true or false | nombre décimal | date | chaine de caractère sans limite|
+
