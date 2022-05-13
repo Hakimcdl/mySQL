@@ -154,13 +154,13 @@ Ensuite mettons à jours nos informations éxistantes en base de données pour l
 On utlisera la commande **UPDATE** qui prends en compte 
 * les noms des champ éxistants
 
-Voici un exemple de commande pour mettre à jours une donnée d'une table en BDD : 
+Voici un exemple de commande pour mettre à jour une donnée d'une table en BDD : 
 ```SQL
 UPDATE `user`
 SET `nickname` = 'toto2'
 WHERE `email` = 'toto@gmail.com';
 ```
-![img shell](https://github.com/Hakimcdl/mySQL/blob/main/img/updateuser.png)
+![img shell](https://github.com/Hakimcdl/mySQL/blob/main/img/updateuser.PNG)
 
 Enfin effaçons les objets sélectionnés dans notre base de données : 
 on utilisera la commande **DELETE**
