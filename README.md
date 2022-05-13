@@ -190,6 +190,7 @@ DELETE * FROM `user`
 ## Les fonctions d'agrégations statiques
 
 Les fonctions d’agrégation sont des fonctions idéales pour effectuer quelques statistiques de bases sur des tables. Les principales fonctions sont les suivantes :
+
 ::: tip
 AVG() pour calculer la moyenne sur un ensemble d’enregistrement
 :::
@@ -199,7 +200,7 @@ COUNT() pour compter le nombre d’enregistrement sur une table ou une colonne d
 :::
 
 ::: tip
-MAX() pour récupérer la valeur maximum d’une colonne sur un ensemble de ligne.
+MAX() pour récupérer la valeur maximum d’une colonne sur un ensemble de ligne
 :::
 
 ::: tip
@@ -213,3 +214,20 @@ SUM() pour calculer la somme sur un ensemble d’enregistrement
 :::
 Cela permet de calculer une valeur moyenne sur un ensemble de données
 :::
+
+### La fonction d'agrégation SQL AVG
+
+On utlisera la commande **AVG** qui prends en compte
+* toutes les données d'une table à savoir une colonne sélectionnée
+
+Voici un exemple de commande ou nous allons calculer la moyenne de consommation urbaines de toutes les voitures :
+```SQL
+SELECT AVG(`city_oil_consumption`) FROM car;
+```
+![img shell](https://github.com/Hakimcdl/mySQL/blob/main/img/consocar.PNG)
+
+Egalement nous pouvons sélectionner les données d'une table par groupe pour spécifier un groupe spécifier (chaque client/utilisateur) :
+```SQL
+SELECT AVG(`city_oil_consumption`) FROM car GROUP BY nickname;
+```
+![img shell](https://github.com/Hakimcdl/mySQL/blob/main/img/consocar.PNG)
