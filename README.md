@@ -284,11 +284,16 @@ On utilsera la commande **SUM** qui prends en compte
 
 Cela permet permet de calculer la somme totale d’une colonne contenant des valeurs numériques.
 ```SQL
-SELECT SUM(nom_colonne)
-FROM table
+SELECT SUM(NOM DE LA COLONNE) FROM NOM DE LA table;
 ```
 Voici un exemple de commande où nous allons calculer la somme totale des prix de tout les voitures :
 ```SQL
 SELECT SUM(`price`) FROM car;
 ```
 ![img shell](https://github.com/Hakimcdl/mySQL/blob/main/img/SUM.PNG)
+
+On peut également y rajouter une condition en y spécifiant l''id concerné:
+```SQL
+SELECT SUM(`price`) AS prix_total FROM car WHERE id = 1;
+```
+![img shell](https://github.com/Hakimcdl/mySQL/blob/main/img/sumid.PNG)
