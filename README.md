@@ -190,18 +190,21 @@ DELETE * FROM `user`
 ## Les fonctions d'agrégations statiques
 
 Les fonctions d’agrégation sont des fonctions idéales pour effectuer quelques statistiques de bases sur des tables. Les principales fonctions sont les suivantes :
-:::
+::: tip
 AVG() pour calculer la moyenne sur un ensemble d’enregistrement
 :::
-:::
+:::tip
 COUNT() pour compter le nombre d’enregistrement sur une table ou une colonne distincte
 :::
-:::
+::: tip
 MAX() pour récupérer la valeur maximum d’une colonne sur un ensemble de ligne.
 :::
+::: tip
 MIN() pour récupérer la valeur minimum de la même manière que MAX()
 :::
-:::
+::: tip
 SUM() pour calculer la somme sur un ensemble d’enregistrement
 :::
+:::
 Cela permet de calculer une valeur moyenne sur un ensemble de données
+:::
