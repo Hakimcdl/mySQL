@@ -168,7 +168,8 @@ UPDATE `user`
 SET `nickname` = 'riri1', `email` = 'riri1@gmail.com'
 WHERE `id` = 2;
 ```
-![img shell](https://github.com/Hakimcdl/mySQL/blob/main/img/updatealldata.PNG)  
+![img shell](https://github.com/Hakimcdl/mySQL/blob/main/img/updatealldata.PNG) 
+![img shell](https://github.com/Hakimcdl/mySQL/blob/main/img/tableupdatePNG) 
 
 Enfin effaçons les objets sélectionnés dans notre base de données : 
 on utilisera la commande **DELETE** qui prends en compte
