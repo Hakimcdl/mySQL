@@ -249,12 +249,30 @@ SELECT COUNT (`price`) FROM car;
 
 ### La fonction d'agrégation SQL MAX
 
+On utilisera la commande **MAX** qui prends en compte
+* La donnée maximale dans une table sélectionnée 
+
 Cela permet de retourner la valeur maximum d’une colonne sur un ensemble de ligne à la fois pour des données numériques ou alphanumérique : 
 ```SQL
-SELECT MAX(NOM DE LA COLONNE) FROM table;
+SELECT MAX(NOM DE LA COLONNE) FROM NOM DE LA table;
 ```
 Par exemple pour voir la voiture la plus consommatrice sur la route nous effectuons la requête suivante:
 ```SQL
 SELECT MAX(`road_oil_consumption`) FROM car;
 ```
 ![img shell](https://github.com/Hakimcdl/mySQL/blob/main/img/max.PNG)
+
+### La fonction d'agrégation SQL MIN
+
+On utilisera la commande **MIN** qui prends en compte
+* La donnée mminimale dans une table sélectionnée 
+
+Cela permet de retourner la valeur minimale d’une colonne sur un ensemble de ligne à la fois pour des données numériques ou alphanumérique : 
+```SQL
+SELECT MIN(NOM DE LA COLONNE) FROM NOM DE LA table;
+```
+Par exemple pour voir la voiture la plus consommatrice sur la route nous effectuons la requête suivante:
+```SQL
+SELECT MIN(`road_oil_consumption`) FROM car;
+```
+![img shell](https://github.com/Hakimcdl/mySQL/blob/main/img/min.PNG)
