@@ -286,4 +286,4 @@ Voici un exemple de commande où nous allons calculer la somme totale des prix d
 ```SQL
 SELECT SUM(`price`) FROM car;
 ```
-![img shell](https://github.com/Hakimcdl/mySQL/blob/main/img/sum.PNG)
+![img shell](https://github.com/Hakimcdl/mySQL/blob/main/img/SUM.PNG)
