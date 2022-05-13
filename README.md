@@ -220,7 +220,7 @@ Cela permet de calculer une valeur moyenne sur un ensemble de données
 On utilsera la commande **AVG** qui prends en compte
 * toutes les données d'une table à savoir une colonne sélectionnée
 
-Voici un exemple de commande où nous allons calculer la moyenne de consommation urbaines de toutes les voitures :
+Voici un exemple de commande où nous allons calculer la moyenne de consommation urbaine de toutes les voitures :
 ```SQL
 SELECT AVG(`city_oil_consumption`) FROM car;
 ```
@@ -276,3 +276,14 @@ Par exemple pour voir la voiture la plus consommatrice sur la route nous effectu
 SELECT MIN(`road_oil_consumption`) FROM car;
 ```
 ![img shell](https://github.com/Hakimcdl/mySQL/blob/main/img/min.PNG)
+
+### La fonction d'agrégation SQL SUM
+
+On utilsera la commande **SUM** qui prends en compte
+* toutes les données additionnées d'une table à savoir sur une colonne de données numériques sélectionnée
+
+Voici un exemple de commande où nous allons calculer la somme totale des prix de tout les voitures :
+```SQL
+SELECT SUM(`price`) FROM car;
+```
+![img shell](https://github.com/Hakimcdl/mySQL/blob/main/img/sum.PNG)
