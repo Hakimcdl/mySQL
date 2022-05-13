@@ -100,7 +100,7 @@ Intéragir avec notre base de données nous permet de réaliser des opérations 
 Toutes les commandes que nous allons voir sont dans la  
 [documentation officielle](https://sql.sh/)
 
-Commençons par insérer des objets uniques pour alimenter notre BDD.
+### Commençons par insérer des objets uniques pour alimenter notre BDD.
 On utilisera la commande **INSERT INTO** qui prends en compte  
 * les paramètres (nom de la table) de la tabe dans laquel on souhaite ajouter l'objet
 * l'odre des colonnes (caractéristique) de l'objet
@@ -118,7 +118,7 @@ VALUES ('riri', 'riri@gmail.com', true), ('fifi', 'fifi@gmail.com', true), ('lou
 ```
 ![img shell](https://github.com/Hakimcdl/mySQL/blob/main/img/creationUsers.png)
 
-Puis sélectionnons les objets dans la base de données pour afficher une lecture de nos données  
+### Puis sélectionnons les objets dans la base de données pour afficher une lecture de nos données  
 On utilisera la commande **SELECT** qui prends en compte
 * Une ou plusieurs colonnes d'une table
 * le nom du champ
@@ -150,7 +150,7 @@ SELECT * FROM `user` ORDER BY id DESC;
 ```
 ![img shell](https://github.com/Hakimcdl/mySQL/blob/main/img/orderby.PNG) 
 ------
-Ensuite mettons à jours nos informations éxistantes en base de données pour les modifier dans notre BDD : 
+### Ensuite mettons à jours nos informations éxistantes en base de données pour les modifier dans notre BDD : 
 On utlisera la commande **UPDATE** qui prends en compte 
 * les noms des champ éxistants
 
@@ -171,7 +171,7 @@ WHERE `id` = 2;
 ![img shell](https://github.com/Hakimcdl/mySQL/blob/main/img/updatealldata.PNG) 
 ![img shell](https://github.com/Hakimcdl/mySQL/blob/main/img/tableupdate.PNG) 
 
-Enfin effaçons les objets sélectionnés dans notre base de données : 
+### Enfin effaçons les objets sélectionnés dans notre base de données : 
 on utilisera la commande **DELETE** qui prends en compte
 * les lignes d'une table
 
@@ -182,7 +182,7 @@ WHERE `id` = 1;
 ```
 ![img shell](https://github.com/Hakimcdl/mySQL/blob/main/img/delete.PNG)
 
-Nous pouvons aussi supprimer tout les utilsiateurs d'une table
+Nous pouvons aussi supprimer tout les utilisateurs d'une table
 ```SQL
 DELETE * FROM `user`
 ```
