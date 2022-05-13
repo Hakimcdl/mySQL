@@ -132,7 +132,7 @@ Voici un exemple où nous allons récupérer plusieurs données dans notre table
 ```SQL
 SELECT `nickname`, `email` FROM `user`;
 ```
-![img shell](https://github.com/Hakimcdl/mySQL/blob/main/img/selectuser.png)
+![img shell](https://github.com/Hakimcdl/mySQL/blob/main/img/selectuser.PNG)
 
 Voici un exemple où je sélectionne tout les utilisateurs avec une contrainte de l'email finissant par gmail.com :  
 ```SQL
@@ -172,3 +172,8 @@ DELETE FROM `user`
 WHERE `id` = 1;
 ```
 ![img shell](https://github.com/Hakimcdl/mySQL/blob/main/img/delete.PNG)
+
+Nous pouvons aussi supprimer tout les utilsiateurs d'une table
+```SQL
+DELETE * FROM `user`
+```
