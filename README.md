@@ -96,7 +96,10 @@ Voici les différents types au sein d'un tableau aissgné à chaque colone et ch
 ## Intéragir avec notre base de données
 
 Intéragir avec notre base de données nous permet de réaliser des opérations l'acronyme CRUD qui signifie : 
-**create** **read** **update** **delete**
+**create** **read** **update** **delete**.  
+Toutes les commandes que nous allons voir sont dans la  
+[documentation officielle](https://sql.sh/)
+
 Commençons par insérer des objets uniques pour alimenter notre BDD.
 On utilisera la commande **INSERT INTO** qui prends en compte  
 * les paramètres (nom de la table) de la tabe dans laquel on souhaite ajouter l'objet
@@ -104,14 +107,60 @@ On utilisera la commande **INSERT INTO** qui prends en compte
 * les valeurs correspondants à chaque colonnes  
 
 Voici un exemple de commande pour ajouter un utilisateur dans la BDD : 
-````SQL
+```SQL
 INSERT INTO `user` (`nickname`, `email`, `adult`)
 VALUES ('toto', 'toto@gmail.com', true);
 ```
 Voici un exemple où nous allons insérer plusieurs utilisateur à la fois : 
-````SQL
+```SQL
 INSERT INTO `user` (`nickname`, `email`, `adult`)
 VALUES ('riri', 'riri@gmail.com', true), ('fifi', 'fifi@gmail.com', true), ('loulou', 'loulou@gmail.com', true);
 ```
 ![img shell](https://github.com/Hakimcdl/mySQL/blob/main/img/creationUsers.png)
 
+Puis sélectionnons les objets dans la base de données pour afficher une lecture de nos données  
+On utilisera la commande **SELECT** qui prends en compte
+* Une ou plusieurs colonnes d'une table
+* le nom du champ
+* le nom de la table
+------
+Voici un exemple de commande pour lire toutes les données d'une table dans la BDD : 
+```SQL
+SELECT * FROM `user`;  
+```
+Voici un exemple où nous allons récupérer plusieurs données dans notre table de la BDD : 
+```SQL
+SELECT `nickname`, `email` FROM `user`;
+```
+![img shell](https://github.com/Hakimcdl/mySQL/blob/main/img/selectuser.png)
+
+Voici un exemple où je sélectionne tout les utilisateurs avec une contrainte de l'email finissant par gmail.com :  
+```SQL
+SELECT `email` FROM `user` 
+WHERE `email` 
+LIKE "%gmail.com";
+```
+![img shell](https://github.com/Hakimcdl/mySQL/blob/main/img/LikeGmail.PNG)  
+Voici comment mettre une contrainte sur une chaine de caractère :
+![img shell](https://github.com/Hakimcdl/mySQL/blob/main/img/email.png)  
+
+Nous pouvons aussi ordonner nos objets grâce au mot clé **ORDER BY** :  
+```SQL
+SELECT * FROM `user` ORDER BY id DESC;
+```
+![img shell](https://github.com/Hakimcdl/mySQL/blob/main/img/orderby.PNG) 
+------
+Ensuite mettons à jours nos informations éxistantes en base de données pour les modifier dans notre BDD : 
+On utlisera la commande **UPDATE** qui prends en compte 
+* les noms des champ éxistants
+
+Voici un exemple de commande pour mettre à jours une donnée d'une table en BDD : 
+```SQL
+UPDATE `user`
+SET `nickname` = 'toto2'
+WHERE `email` = 'toto@gmail.com';
+```
+![img shell](https://github.com/Hakimcdl/mySQL/blob/main/img/updateuser.png)
+
+Enfin effaçons les objets sélectionnés dans notre base de données : 
+on utilisera la commande **DELETE**
