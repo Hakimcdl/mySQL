@@ -217,10 +217,10 @@ Cela permet de calculer une valeur moyenne sur un ensemble de données
 
 ### La fonction d'agrégation SQL AVG
 
-On utlisera la commande **AVG** qui prends en compte
+On utilsera la commande **AVG** qui prends en compte
 * toutes les données d'une table à savoir une colonne sélectionnée
 
-Voici un exemple de commande ou nous allons calculer la moyenne de consommation urbaines de toutes les voitures :
+Voici un exemple de commande où nous allons calculer la moyenne de consommation urbaines de toutes les voitures :
 ```SQL
 SELECT AVG(`city_oil_consumption`) FROM car;
 ```
@@ -231,3 +231,17 @@ Egalement nous pouvons sélectionner les données d'une table par groupe pour sp
 SELECT AVG(`city_oil_consumption`) FROM car GROUP BY nickname;
 ```
 ![img shell](https://github.com/Hakimcdl/mySQL/blob/main/img/consocar.PNG)
+
+### La fonction d'agrégation SQL COUNT
+
+On utilisera la commande **COUNT** qui prends en compte
+* toutes les données dans une table additionnée 
+
+Voici un exemple pour connaitre le nombre de ligne total dans une table :
+```SQL
+SELECT COUNT (`price`) FROM car;
+```
+```SQL
+SELECT COUNT(*) FROM car;
+```
+![img shell](https://github.com/Hakimcdl/mySQL/blob/main/img/count.PNG)
