@@ -309,7 +309,7 @@ Voic la commande a effectuée:
 ```SQL
 ALTER TABLE `NOM DE LA TABLE` ADD FOREIGN KEY (`CHAMP DE LA TABLE`) REFERENCES NOM DE LA TABLE(id) ON DELETE CASCADE;
 ```
-PAr exemple notre table **BRAND** incluant le champ *NAME* en l'ocurence *Audi* peut avoir plusieurs modèles soit *brand_id* de notre table **CAR** donc une Audi peut être une Audi A3, une Audi TT RS5 coupe sport, ou une Audi R8 coupe V10.
+Par exemple notre table **BRAND** incluant le champ *NAME* en l'ocurence *Audi* peut avoir plusieurs modèles soit *brand_id* de notre table **CAR** donc une Audi peut être une Audi A3, une Audi TT RS5 coupe sport, ou une Audi R8 coupe V10.
 
 Voici comment nous procédons concrètement (voir screen shot ci dessous):
 ![img shell](https://github.com/Hakimcdl/mySQL/blob/main/img/altertableCAR.PNG)
@@ -319,9 +319,21 @@ Voici comment nous procédons concrètement (voir screen shot ci dessous):
 Afin de pouvoir effectuer ds liasons entre les tables il nous ajouter un champ à celui-ci.
 Par exemple nous ajoutons un champ nommé dans la table **USER** pour que celui-ci soit rélié à la table **CAR**
 
+Voic la commande a effectuée: 
+```SQL
+ALTER TABLE `user` ADD `id_user_car` INT NOT NULL;
+```
+
 Voici comment nous procédons concrètement (voir screen shot ci dessous):
 ![img shell](https://github.com/Hakimcdl/mySQL/blob/main/img/addField.PNG)
 
-## La fonction SQL INNER JOIN
+## La fonction SQL INNER JOIN  
 
-On utilisera la commande INNER JOIN pour lier plusieurs tables entre-elles,
+La commande **INNER JOIN** est un type de jointure très commune pour lier plusieurs tables entres elles. cette commande retourne les enregistrements lorsqu'il y a au moins une ligne dans chaque colonne qui correspond à la condition.  
+
+On utilisera la commande suivante :  
+
+```SQL
+SELECT * FROM user INNER JOIN car ON user.id = car.id;
+```  
+![image Shell](https://github.com/Thomas17130/mySql/blob/main/img/innerJoin.png)  
