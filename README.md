@@ -303,13 +303,24 @@ SELECT SUM(`price`) AS prix_total FROM car WHERE id = 1;   /////lier table pour 
 ## La fonction SQL ALTER TABLE
 
 On utilisera la commande ALTER TABLE pour lier plusieurs tables entre-elles, en effet cela nous permet d'établir une relation à double sens: 
+En effet nous pouvons avoir du "Many to One" ou "One to Many" car la relation est bi-drectionnelles.
 
-En effet nous pouvons avoir du Many to One ou One to Many car la relation est bi-drectionnelles.
-
-PAr exemple notre table **BRAND** incluant le champ *NAME* en locurence *Audi* peut avoir plusieurs modèles soit *brand_id* de notre table **CAR** donc une Audi peut être une Audi A3, une Audi TT RS5 coupe sport, ou une Audi R8 coupe V10.
+Voic la commande a effectuée: 
+```SQL
+ALTER TABLE `NOM DE LA TABLE` ADD FOREIGN KEY (`CHAMP DE LA TABLE`) REFERENCES NOM DE LA TABLE(id) ON DELETE CASCADE;
+```
+PAr exemple notre table **BRAND** incluant le champ *NAME* en l'ocurence *Audi* peut avoir plusieurs modèles soit *brand_id* de notre table **CAR** donc une Audi peut être une Audi A3, une Audi TT RS5 coupe sport, ou une Audi R8 coupe V10.
 
 Voici comment nous procédons concrètement (voir screen shot ci dessous):
-![img shell](https://github.com/Hakimcdl/mySQL/blob/main/img/ALTERTABLE.PNG)
+![img shell](https://github.com/Hakimcdl/mySQL/blob/main/img/altertableCAR.PNG)
+
+## Ajouter un champ dans une table
+
+Afin de pouvoir effectuer ds liasons entre les tables il nous ajouter un champ à celui-ci.
+Par exemple nous ajoutons un champ nommé dans la table **USER** pour que celui-ci soit rélié à la table **CAR**
+
+Voici comment nous procédons concrètement (voir screen shot ci dessous):
+![img shell](https://github.com/Hakimcdl/mySQL/blob/main/img/addField.PNG)
 
 ## La fonction SQL INNER JOIN
 
