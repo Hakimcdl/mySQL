@@ -299,6 +299,18 @@ SELECT SUM(`price`) AS prix_total FROM car WHERE id = 1;   /////lier table pour 
 ![img shell](https://github.com/Hakimcdl/mySQL/blob/main/img/sumid.PNG)
 
 ------
+
+## La fonction SQL ALTER TABLE
+
+On utilisera la commande ALTER TABLE pour lier plusieurs tables entre-elles, en effet cela ,ous eprmet d'établir une relation à double sens: 
+
+EN effet nous pouvons avoir du Many to One ou One to Many car la relation est bi-drectionnelles.
+
+PAr exemple notre table **BRAND** incluant le champ *NAME* en locurence *Audi* peut avoir plusieurs modèles soit *brand_id* de notre table **CAR** donc une Audi peut être une Audi A3, une Audi TT RS5 coupe sport, ou une Audi R8 coupe V10.
+
+Voici comment nous procédons concrètement (voir screen shot ci dessous):
+![img shell](https://github.com/Hakimcdl/mySQL/blob/main/img/ALTERTABLE.PNG)
+
 ## La fonction SQL INNER JOIN
 
-On utilisera la commande INNER JOIN pour lier plusieurs tables entre-elles
+On utilisera la commande INNER JOIN pour lier plusieurs tables entre-elles,
