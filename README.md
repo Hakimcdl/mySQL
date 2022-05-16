@@ -300,9 +300,12 @@ SELECT SUM(`price`) AS prix_total FROM car WHERE id = 1;   /////lier table pour 
 
 ------
 
-## La fonction SQL ALTER TABLE
+## La requête SQL ALTER TABLE
 
-On utilisera la commande ALTER TABLE pour lier plusieurs tables entre-elles, en effet cela nous permet d'établir une relation à double sens: 
+La commande ALTER TABLE en SQL permet de modifier une table existante. Idéal pour ajouter une colonne, supprimer une colonne ou modifier une colonne existante, par exemple pour changer le type, ou même la renomer et ajouter une clé étrangère bref les possibilités sont nombreuses.
+
+On utilisera également la commande ALTER TABLE pour lier plusieurs tables entre-elles, en effet cela nous permet d'établir une relation à double sens: 
+
 En effet nous pouvons avoir du "Many to One" ou "One to Many" car la relation est bi-drectionnelles.
 
 Voic la commande a effectuée: 
@@ -314,7 +317,7 @@ Par exemple notre table **BRAND** incluant le champ *NAME* en l'ocurence *Audi* 
 Voici comment nous procédons concrètement (voir screen shot ci dessous):
 ![img shell](https://github.com/Hakimcdl/mySQL/blob/main/img/altertableCAR.PNG)
 
-## Ajouter un champ dans une table
+## Ajouter un champ dans une table SQL ALTER TABLE
 
 Afin de pouvoir effectuer ds liasons entre les tables il nous ajouter un champ à celui-ci.
 Par exemple nous ajoutons un champ nommé dans la table **USER** pour que celui-ci soit rélié à la table **CAR**
@@ -327,7 +330,7 @@ ALTER TABLE `user` ADD `id_user_car` INT NOT NULL;
 Voici comment nous procédons concrètement (voir screen shot ci dessous):
 ![img shell](https://github.com/Hakimcdl/mySQL/blob/main/img/addField.PNG)
 
-## La fonction SQL INNER JOIN  
+## La fonction SQL INNER JOIN  (thomas)
 
 La commande **INNER JOIN** est un type de jointure très commune pour lier plusieurs tables entres elles. cette commande retourne les enregistrements lorsqu'il y a au moins une ligne dans chaque colonne qui correspond à la condition.  
 
@@ -337,3 +340,33 @@ On utilisera la commande suivante :
 SELECT * FROM user INNER JOIN car ON user.id = car.id;
 ```  
 ![image Shell](https://github.com/Thomas17130/mySql/blob/main/img/innerJoin.png)  
+
+## La requête SQL INNER JOIN  (hakim)
+
+Afin de créer l'inner join une table intermédiraire a été créé appelé **users_cars** permettant de créer 2 clés étrangères sur cette même table intermédiaire afin de les joindre aux 2 autres tables concernée à savoir **USER** et **CAR**.
+
+On utlisera la commande suivante: 
+```SQL
+ CREATE TABLE users_cars (id_user INTEGER NOT NULL, id_car INTEGER NOT NULL);
+```  
+1er action effectué la création de la table intermédiaire
+![image Shell](https://github.com/Thomas17130/mySql/blob/main/img/creationtablejointure.PNG)
+
+puis 2ème action effectuée c'est à dire l'affection des clés étrangères:
+
+On utlisera la commande suivante pour la 1ère clés: 
+
+```SQL
+ALTER TABLE `users_cars` ADD FOREIGN KEY (`id_user`) REFERENCES car(id) ON DELETE CASCADE;
+```  
+
+On utlisera la commande suivante pour la 2ème clés: 
+
+```SQL
+ALTER TABLE `users_cars` ADD FOREIGN KEY (`id_car`) REFERENCES user(id) ON DELETE CASCADE;
+```
+
+Ainsi cela permet de créer les liens MANY TO MANY entre plusieurs utilisateurs et plusieurs voitures: 
+Voici un sceenshot démonstratif montrant la jointure de celui-ci via la table de jointure:
+
+![image Shell](https://github.com/Thomas17130/mySql/blob/main/img/foreignkeyid.PNG)
