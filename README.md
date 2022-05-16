@@ -337,9 +337,9 @@ La commande **INNER JOIN** est un type de jointure très commune pour lier plusi
 On utilisera la commande suivante :  
 
 ```SQL
-SELECT * FROM user INNER JOIN car ON user.id = car.id;
+SELECT * FROM CAR INNER JOIN Brand ON brand_id = brand.id;
 ```  
-![image Shell](https://github.com/Thomas17130/mySql/blob/main/img/innerJoin.png)  
+![img shell](https://github.com/Hakimcdl/mySQL/blob/main/img/innerjoinBrandid.PNG)
 
 ## La requête SQL INNER JOIN
 
