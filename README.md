@@ -330,7 +330,7 @@ ALTER TABLE `user` ADD `id_user_car` INT NOT NULL;
 Voici comment nous procédons concrètement (voir screen shot ci dessous):
 ![img shell](https://github.com/Hakimcdl/mySQL/blob/main/img/addField.PNG)
 
-## La fonction SQL INNER JOIN  (thomas)
+## La fonction SQL INNER JOIN
 
 La commande **INNER JOIN** est un type de jointure très commune pour lier plusieurs tables entres elles. cette commande retourne les enregistrements lorsqu'il y a au moins une ligne dans chaque colonne qui correspond à la condition.  
 
@@ -341,7 +341,7 @@ SELECT * FROM user INNER JOIN car ON user.id = car.id;
 ```  
 ![image Shell](https://github.com/Thomas17130/mySql/blob/main/img/innerJoin.png)  
 
-## La requête SQL INNER JOIN  (hakim)
+## La requête SQL INNER JOIN
 
 Afin de créer l'inner join une table intermédiraire a été créé appelé **users_cars** permettant de créer 2 clés étrangères sur cette même table intermédiaire afin de les joindre aux 2 autres tables concernée à savoir **USER** et **CAR**.
 
@@ -369,4 +369,4 @@ ALTER TABLE `users_cars` ADD FOREIGN KEY (`id_car`) REFERENCES user(id) ON DELET
 Ainsi cela permet de créer les liens MANY TO MANY entre plusieurs utilisateurs et plusieurs voitures: 
 Voici un sceenshot démonstratif montrant la jointure de celui-ci via la table de jointure:
 
-![image Shell](https://github.com/Thomas17130/mySql/blob/main/img/foreignkeyid.PNG)
+![image Shell](https://github.com/Thomas17130/mySql/blob/main/img/foreignkeiid.PNG)
